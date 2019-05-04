@@ -18,10 +18,10 @@ Basic understanding about
 * AWS4 signing process
 
 ## How does it work?
-1. When the web application receives a GET request at *http://localhost:8099/predict/sagemaker/deepar?target=<target_name>*, the value of parameter *target* is extracted and used to locate the a file containing the time series input data for the model, see following source files for details:
+1. When the web application receives a GET request at *http://localhost:8099/predict/sagemaker/deepar?target=<target_name>*, the value of parameter *target* is extracted and used to locate the file containing the time series input data for the model, see following source files for details:
      - [WebController.java](https://github.com/adventure-island/springboot-deepar-template/blob/master/src/main/java/com/tensorlab/ml/WebController.java)
      - [LabManager.java](https://github.com/adventure-island/springboot-deepar-template/blob/master/src/main/java/com/tensorlab/ml/LabManager.java)
-2. The input file is loaded and transformed into a json object, which will be used and the DeepAR POST request payload, see [com.tensorloab.ml.aws.sagemaker.deepar.json](https://github.com/adventure-island/springboot-deepar-template/blob/master/src/main/java/com/tensorlab/ml/aws/sagemaker/deepar/json) for details
+2. The input file is loaded and transformed into a json object, which will be used as the DeepAR POST request payload, see [com.tensorloab.ml.aws.sagemaker.deepar.json](https://github.com/adventure-island/springboot-deepar-template/blob/master/src/main/java/com/tensorlab/ml/aws/sagemaker/deepar/json) for details
 3. AWS4 authentication headers are built based on your AWS user credential, current UTC request time, SageMaker endpoint specification and the request payload, 
       - see [Examples of the Complete Version 4 Signing Process (Python)](https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html) for the detailed specification of AWS4 signing process and a python implementation
       - check this source folder for my java implementation -  [com.tensorlab.ml.aws.auth](https://github.com/adventure-island/springboot-deepar-template/blob/master/src/main/java/com/tensorlab/ml/aws/auth/)
