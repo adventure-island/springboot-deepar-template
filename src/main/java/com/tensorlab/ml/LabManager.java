@@ -39,7 +39,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.tensorlab.ml.aws.auth.Aws4SignatureKeyGenerator;
-import com.tensorlab.ml.aws.auth.Aws4Signiner;
+import com.tensorlab.ml.aws.auth.Aws4Signer;
 import com.tensorlab.ml.aws.sagemaker.deepar.json.requeset.Configuration;
 import com.tensorlab.ml.aws.sagemaker.deepar.json.requeset.DeepArRequest;
 import com.tensorlab.ml.aws.sagemaker.deepar.json.requeset.Instance;
@@ -64,7 +64,7 @@ public class LabManager implements InitializingBean {
 	private AppConfig appConfig;
 	
 	@Autowired
-	private Aws4Signiner signer;
+	private Aws4Signer signer;
 	
 
 	@Override

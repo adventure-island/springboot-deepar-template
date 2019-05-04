@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Service
-public class Aws4Signiner {
+public class Aws4Signer {
 	private final static String REQUEST_CONTENT_TYPE = "application/json";
 	private final static String AUTH_ALGORITHM = "AWS4-HMAC-SHA256";
 	private final static String REQUEST_METHOD = "POST";
@@ -77,7 +77,7 @@ public class Aws4Signiner {
 	 * @return the formatted date string
 	 */
 	public String getDate(OffsetDateTime dateTime) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
 		String formatDateTime = dateTime.format(formatter);
 		return formatDateTime;
 	}

@@ -83,6 +83,10 @@
 			<artifactId>tablesaw-jsplot</artifactId>
 			<version>0.32.6</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
