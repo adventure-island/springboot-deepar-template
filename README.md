@@ -53,6 +53,6 @@ datetime,category0,category1
 * Current input data needs to have 2 categories, use [jsonschema2pojo](http://www.jsonschema2pojo.org/) to regenerate DeepAR json request and response classes according to your actual requirement
 * Directly test your deployed endpoint using SageMaker API with your AWS notebook to make sure the model inference works in the first place
 * Use [Postman](https://www.getpostman.com/) to test your IAM user access key and secret
-* Interested in code basedline that can help you quickly setup a local RNN training envrionment? - See [tensorlab](https://github.com/adventure-island/tensorlab) - A deep learning tool which helps data scientist and deep learning engineer quickly and efficiently setup experiment for time series data modelling and prediction, using Keras(with Tensorflow backend)
+* Interested in code basedline that can help you quickly setup a local RNN training envrionment? - See **[tensorlab](https://github.com/adventure-island/tensorlab) - A Versatile Python Tool for RNN Modeling Experiments Using Keras)**
 
 
