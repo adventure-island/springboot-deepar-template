@@ -1,0 +1,21 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+
+server:
+  port: 8099
+
+app-config:      
+  aws-auth-config:
+    # Use environment variable to store your AWS IAM access key and secret key
+    # Make sure your AWS user has the right permission to invoke your endpoint
+    access-key: ${AWS_SAGEMAKER_USER_ACCESS_KEY}
+    secret-key: ${AWS_SAGEMAKER_USER_SECRET_KEY}
+    service-name: sagemaker
+    service-region: us-east-1
+    service-host: runtime.sagemaker.us-east-1.amazonaws.com
+    # Put your SageMaker endpoint name here or use another application.ymal
+    # in you application directory
+    service-end-point: <SAGEMAKER ENDPOINT NAME>
+        
