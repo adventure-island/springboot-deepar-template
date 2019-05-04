@@ -7,7 +7,6 @@ This template application was built using Java Spring Boot framework with the ai
 * Implemented as a Spring Boot Web Application(running on port **8099**, feel free to customize), service is invoked at *http://localhost:8099/predict/sagemaker/deepar?target=<target_name>*, see explanation below
 * DeepAR request/response jsonization - Build your DeepAR request using provided json classes
 * AWS4 signing implementation - All the lengthy and error-prone work is done for you!
-* Input file template with categories
 * Response data visualization in browser using **JTablasaw** - a Java dataframe and visualization library, see [JTablasaw on Github](https://github.com/jtablesaw/tablesaw)
 
 ## Requirements
@@ -31,7 +30,7 @@ Basic understanding about
 
 ### Application Configuration
 - Define your AWS IAM access key and secret as environment variable **AWS_SAGEMAKER_USER_ACCESS_KEY** and **AWS_SAGEMAKER_USER_ACCESS_KEY**, respectively
-- In **src/main/resource/application.yml** (Note that you can also create your own application.yml in application directory to
+- In **[application.yml](https://github.com/adventure-island/springboot-deepar-template/blob/master/src/main/resources/application.yml)** (Note that you can also create your own application.yml in application directory to
 overwrite the default values)
      * specify your SageMaker service region and host, visit this link to find out the region and endpoint that suit your requirement: [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#sagemaker_region)
      * specify the endpoint name of your deployed model, this is the name you used to deploy the your model endpoint
