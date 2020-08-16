@@ -1,5 +1,5 @@
 # Spring Boot Template for Amazon SageMaker DeepAR Endpoint Integration
-This template application was built using Java Spring Boot framework with the aim to help machine learning engineer quickly setup an working code baseline for DeepAR endpoint testing/integration.
+This template application was built using Java Spring Boot framework with the aim to help machine learning engineer quickly setup a working code baseline for DeepAR endpoint testing/integration.
 
 <img src="screenshot-boot-deepar.png" alt="screenshot-boot-deepar" width="600"/>
 
